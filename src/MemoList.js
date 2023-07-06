@@ -6,8 +6,8 @@ function MemoList(props) {
     <div>
       <ul>
         {props.memos.map((memo) => (
-          <li>
-            <Memo title={memo.title} />
+          <li key={memo.id}>
+            <Memo memo={memo} handleEdit={props.handleEdit} />
           </li>
         ))}
       </ul>
