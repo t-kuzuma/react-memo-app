@@ -1,0 +1,69 @@
+.App {
+  display: flex;
+  margin: 60px auto;
+  width: 75%;
+}
+
+.MemoList {
+  flex: 1;
+}
+
+.MemoList ul {
+  padding: 0;
+}
+
+.MemoList li {
+  list-style: none;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.MemoEditor {
+  flex: 3;
+}
+
+.MemoEditor {
+  border: 1px #000 solid;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.MemoEditor form {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.MemoEditor label {
+  font-weight: bold;
+}
+
+.MemoEditor input,
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+}
+
+button {
+  background-color: #ddd;
+  color: #000;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  margin: 20px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button-container {
+  display: flex;
+}
+
+.button-container button {
+  flex: 1;
+}
