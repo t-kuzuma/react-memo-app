@@ -49,25 +49,10 @@ function App() {
 
     const updatedMemo = {
       ...selectedMemo,
-      title: selectedMemo.title,
-      content: selectedMemo.content,
       isEdit: true,
     };
 
     const updatedMemos = validMemos.map((memo) =>
-      memo.id === selectedMemo.id ? updatedMemo : memo
-    );
-    setMemos(updatedMemos);
-  }
-
-  function handleChange(key, selectedMemo, e) {
-    const updatedMemo = {
-      ...selectedMemo,
-      [key]: e.target.value,
-      isEdit: true,
-    };
-
-    const updatedMemos = memos.map((memo) =>
       memo.id === selectedMemo.id ? updatedMemo : memo
     );
     setMemos(updatedMemos);
@@ -112,7 +97,6 @@ function App() {
         memos={memos}
         handleSubmit={handleSubmit}
         handleDelete={handleDelete}
-        handleChange={handleChange}
       />
     </div>
   );
