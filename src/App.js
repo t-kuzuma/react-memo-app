@@ -5,20 +5,9 @@ import MemoEditor from "./MemoEditor";
 import { useEffect } from "react";
 
 function App() {
-  const [memos, setMemos] = useState([
-    {
-      id: 1,
-      title: "メモ1",
-      content: "メモ1の内容",
-      isEdit: false,
-    },
-    {
-      id: 2,
-      title: "メモ2",
-      content: "メモ2の内容",
-      isEdit: false,
-    },
-  ]);
+  const [memos, setMemos] = useState(
+    JSON.parse(localStorage.getItem("memos")) || []
+  );
 
   function handleNew() {
     const validMemos = memos
@@ -73,7 +62,6 @@ function App() {
           }
         : memo
     );
-
     setMemos(updatedMemos);
   }
 
@@ -84,7 +72,7 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(memos);
+    localStorage.setItem("memos", JSON.stringify(memos));
   }, [memos]);
 
   return (
