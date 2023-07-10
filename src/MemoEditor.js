@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
-function MemoEditor(props) {
+export default function MemoEditor(props) {
   const selectedMemo = props.memos.find((memo) => memo.isEdit === true);
   const [editingMemo, setEditingMemo] = useState(null);
 
@@ -54,5 +53,3 @@ function MemoEditor(props) {
     </div>
   );
 }
-
-export default MemoEditor;

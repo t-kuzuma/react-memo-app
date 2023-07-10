@@ -1,7 +1,7 @@
 import "./App.css";
 import Memo from "./Memo";
 
-function MemoList(props) {
+export default function MemoList(props) {
   return (
     <div>
       <ul>
@@ -14,5 +14,3 @@ function MemoList(props) {
     </div>
   );
 }
-
-export default MemoList;
